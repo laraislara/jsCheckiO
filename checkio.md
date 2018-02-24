@@ -1,21 +1,3 @@
-####Найти самую популярную букву
-
-```js
-function mostWanted(data) {
-    return data.replace(/[^a-z]/gi,'').toLowerCase()
-     .split('').sort().join('')
-     .match(/(.)\1*/g)
-     .sort((a,b)=> b.length !== a.length ? b.length-a.length : a.localeCompare(b))[0][0]
- }
-```
-#### Поиск длины самой длинной последовательности в строке
-
-```js
-function longRepeat(line) {
-    if (line.length === 0) return 0;
-    return line.match(/(.)\1*/g).sort((a,b) => b.length-a.length)[0].length;
-}
-```
 
 #### Вернуть массив, состоящий только из неуникальных элементов данного массива
 
@@ -25,7 +7,7 @@ function nonUniqueElements(data) {
 }
 ```
 
-####Преобразовать римские цифры
+#### Преобразовать римские цифры
 
 ```js
 const NUM_TO_ROMAN = [
@@ -76,7 +58,7 @@ function fizzBuzz(data) {
 }
 ```
 
-####Предложения всегда должны начинаться с большой буквы и заканчиваться точкой
+#### Предложения всегда должны начинаться с большой буквы и заканчиваться точкой
 
 ```js
 function correctSentence(text) {
@@ -89,7 +71,7 @@ function correctSentence(text) {
 }
 ```
 
-####Для работы в онлайн кодере (убрать дубли)
+#### Для работы в онлайн кодере (убрать дубли)
 
 ```html
 <div id='ccc'>
@@ -116,7 +98,7 @@ function parseData(data) {
 }
 ```
 
-####Поиск неуникальных элементов (уникальных)
+#### Поиск неуникальных элементов (уникальных)
 
 ```js
 function nonUniqueElements(data) {
@@ -130,15 +112,7 @@ function nonUniqueElements(data) {
 }
 ```
 
-#### Взять первое слово в строке
-
-```js
-function firstWord(text) {
-    return text.match(/[a-zA-Z']+/)[0];
-}
-```
-
-####Найти сумму элементов с четными индексами, затем перемножить эту сумму
+#### Найти сумму элементов с четными индексами, затем перемножить эту сумму
 и последний элемент исходного массива.
 
 ```js
@@ -163,7 +137,7 @@ function secondIndex(text, symbol) {
 }
 ```
 
-####Найти текст, заключенный между двумя маркерами.
+#### Найти текст, заключенный между двумя маркерами.
 
 ```js
 function betweenMarkers(text, begin, end) {
@@ -173,30 +147,7 @@ function betweenMarkers(text, begin, end) {
 }
 ```
 
-####Найти только заглавные буквы и соединить
-
-```js
-function findMessage(data) {
-    return data.replace(/[^A-Z]/g, '');
-}
-```
-
-#### Проверить есть ли в исходной строке три слова подряд.
-
-```js
-function threeWords(data) {
-    var re = /\s?[a-z]+\s[a-z]+\s[a-z]+\s?/gi;
-    return re.test(data);
-}
-```
-
-```js
-function threeWords(data) {
-    return /\D+\s\D+\s\D+/.test(data);
-}
-```
-
-####Найти N-ую степень элемента в массиве с индексом N
+#### Найти N-ую степень элемента в массиве с индексом N
 
 ```js
 function indexPower(array, n){
@@ -209,18 +160,6 @@ function indexPower(array, n){
 ```js
 function mostNumbers(...args){
     return args.length === 0 ? 0 : Math.max(...args) - Math.min(...args)
-}
-```
-
-#### Перемножить цифры в числе
-
-```js
-function digitsMultip(data) {
-    return parseInt(data
-		.toString()
-    	.replace(/0+/g, '')
-		.split('')
-        .reduce((multiple, current) => multiple * current));
 }
 ```
 
@@ -239,7 +178,7 @@ function commonWords(first, second) {
 }
 ```
 
-####Подсчитать число инверсий в последовательности.
+#### Подсчитать число инверсий в последовательности.
 
 ```js
 function countInversion(sequence){
