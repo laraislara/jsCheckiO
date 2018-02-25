@@ -26,7 +26,8 @@ function translate(phrase){
     const re2 = new RegExp(`([${VOWELS}]){3}`,'gi')
     return phrase.replace(re2,'$1')
    }
-
+```
+```js
 function translate(phrase){
     return phrase
         .replace(/([^aeiouy ])\w/g,'$1')
