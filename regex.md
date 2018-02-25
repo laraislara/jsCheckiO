@@ -17,6 +17,22 @@ function longRepeat(line) {
     return line.match(/(.)\1*/g).sort((a,b) => b.length-a.length)[0].length;
 }
 ```
+#### Убрать из строки повторяющиеся символы (гласные и согласные). Bird language. 
+
+```js
+function translate(phrase){
+    const re = new RegExp(`([^${VOWELS}\\s])(.)`,'gi')
+    phrase = phrase.replace(re,'$1')
+    const re2 = new RegExp(`([${VOWELS}]){3}`,'gi')
+    return phrase.replace(re2,'$1')
+   }
+
+function translate(phrase){
+    return phrase
+        .replace(/([^aeiouy ])\w/g,'$1')
+        .replace(/([aeiouy]){3}/g,'$1');
+  }
+```
 
 #### Взять первое слово в строке
 
