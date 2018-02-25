@@ -60,6 +60,3 @@ function digitsMultip(data) {
         .reduce((multiple, current) => multiple * current));
 }
 ```
-
-
-
